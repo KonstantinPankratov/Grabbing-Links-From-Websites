@@ -1,0 +1,75 @@
+* {
+	outline: none;
+	border: 0;
+	margin: 0;
+	-webkit-box-sizing:border-box;
+		-ms-box-sizing:border-box;
+			box-sizing:border-box;
+}
+body {
+	width: 100%;height: 100%;
+	overflow: hidden;
+	background: #DDE1EB;
+	font-family: sans-serif;
+}
+.wrapper {
+	width: 600px;
+	margin: auto;
+}
+
+form{
+	margin: 100px 0 30px;
+	width: 100%;
+}
+form input{
+	width: 540px;
+	font-size: 18px;
+
+	padding: 15px 15px;
+	float: left;
+	border-radius: 5px 0 0 5px;
+}
+form a{
+	width: 60px;
+	font-size: 11px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+
+	padding: 19.5px 0;
+	float: left;
+
+	border: 0;
+	outline: 0;
+	background: #B1BBD2;
+	color: white;
+	border-radius: 0 5px 5px 0;
+
+	cursor: pointer;
+}
+.shadow {
+	box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.05);
+}
+.response {
+	width: 100%;
+	border-radius: 5px;
+	background: #FFFFFF;
+}
+.response .panel {
+	width: 100%;
+	background: #B1BBD2;
+}
+.response .panel #copy, .response .panel #upload{
+	float: right;
+	padding: 15px 5px;
+	margin: 0 10px 0 0;
+
+	color: white;
+	cursor: pointer;
+	font-size: 11px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.response #for-link {
+	padding: 20px 10px;
+}
