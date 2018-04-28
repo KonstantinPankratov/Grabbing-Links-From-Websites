@@ -24,6 +24,8 @@
 		var form = document.getElementById("form");
 		var url = document.getElementById("url");
 		var send_button = document.getElementById("send");
+		var copy_button = document.getElementById("copy");
+		var upload_button = document.getElementById("upload");
 
 		function send() {
 			var request = new XMLHttpRequest();
@@ -50,7 +52,32 @@
 		  }
 		}
 
+		function copy_to_clipboard() {
+			var target = document.getElementById("for-link"), range, selection;
+
+			if (document.body.createTextRange) {
+		        range = document.body.createTextRange();
+		        range.moveToElementText(target);
+		        range.select();
+		    } else if (window.getSelection) {
+		        selection = window.getSelection();        
+		        range = document.createRange();
+		        range.selectNodeContents(target);
+		        selection.removeAllRanges();
+		        selection.addRange(range);
+		    }
+
+			document.execCommand("Copy");
+			alert("Text copied to a clipboard!");
+		}
+
+		function upload() {
+			alert("Doesn't work yet :(");
+		}
+		
 		send_button.addEventListener("click", send, false);
+		copy_button.addEventListener("click", copy_to_clipboard, false);
+		upload_button.addEventListener("click", upload, false);
 		</script>
 	</body>
 </html>
