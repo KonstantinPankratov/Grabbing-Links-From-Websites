@@ -3,7 +3,6 @@
 /**
  * Grabbing links class from websites
  *
- * @package LinksGrabber
  * @author Konstantin Pankratov <hello@kopa.pw>
  */
 
@@ -66,6 +65,7 @@ class LinksGrabber
 	private function validate_url($url)
 	{
 		$temp = $url;
+
 		if (strpos($temp, '/') === false) {
 			$temp = $temp . '/';
 		}
@@ -75,6 +75,7 @@ class LinksGrabber
 		if (empty(parse_url($temp)['path'])) {
 			$temp = $temp . "/";
 		}
+
 		return $this->URL = $temp;
 	}
 
@@ -92,10 +93,5 @@ class LinksGrabber
 	    	return $response = ["Failed to open website. Please, be sure that the website address is correct."];
 	    }
 	}
-
 }
-
-$LinksGrabber = new LinksGrabber($_GET["url"]);
-
-echo json_encode($response);
 ?>
