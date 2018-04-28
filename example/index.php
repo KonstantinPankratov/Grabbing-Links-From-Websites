@@ -29,7 +29,7 @@
 
 		function send() {
 			var request = new XMLHttpRequest();
-				request.open('GET', '/links_grabber_class.php?url=' + url.value, false);
+				request.open('GET', 'handler.php?url=' + url.value, false);
 				request.send();
 
 				if (request.status != 200) {
